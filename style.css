@@ -1,0 +1,28 @@
+h3{
+    color: red;
+    font-size: 26px;
+    text-align: center;
+}
+h2{
+    color: black;
+
+}
+.D{
+    font-size: 17px;
+}
+.B{
+    font-size: 18px;
+    color: blue;
+}
+body{
+    background-color: lightgray;
+}
+
+img{
+    width: 30%;
+    border-radius: 15px;
+    
+}
+body{
+    text-align: center;
+}
