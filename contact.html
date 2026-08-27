@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - My Travel Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contact Us</h1>
+    <p>Have questions, feedback, or spot recommendations? Get in touch with us using the form below!</p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Your Details</legend>
+
+            <!-- 1. Name input -->
+            <p>
+                <label for="user-name">Name:</label><br>
+                <input type="text" id="user-name" name="user_name" required>
+            </p>
+
+            <!-- 2. Email input -->
+            <p>
+                <label for="user-email">Email:</label><br>
+                <input type="email" id="user-email" name="user_email" required>
+            </p>
+
+            <!-- 3. Subject dropdown -->
+            <p>
+                <label for="subject">Subject:</label><br>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="suggest">Suggest a Place</option>
+                    <option value="correct">Correct a Detail</option>
+                    <option value="question">Ask a Question</option>
+                    <option value="other">Something Else</option>
+                </select>
+            </p>
+
+            <!-- 4. Message textarea -->
+            <p>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="user_message" rows="5" cols="30" required></textarea>
+            </p>
+
+            <!-- Submit button -->
+            <p>
+                <button type="submit">Send Message</button>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
