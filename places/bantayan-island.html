@@ -3,58 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>Bantayan Island - Details</title>
-    <!-- Ginamitan ng ../ para ma-link ang style.css mula sa labas na folder -->
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <!-- NAV: Ginamitan ng ../ para makabalik sa root files -->
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../act.html">Activity</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- 1. Place name as <h1> -->
-    <h1>Bantayan Island, Cebu</h1>
+    <h1>Bantayan Island</h1>
 
-    <!-- 2. Larger photo with proper alt text -->
-    <img src="https://laurenslighthouse.com/wp-content/uploads/2024/01/DJI_0133.jpg" alt="Aerial view of Bantayan Island white sand beach" width="100%">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kota_Beach_Bantayan_Island.jpg/800px-Kota_Beach_Bantayan_Island.jpg" alt="Kota Beach Bantayan Island" width="100%">
 
-    <!-- 3. Full description -->
     <section>
-        <h2>Why You Should Visit</h2>
+        <h2>About this Place</h2>
         <p>
-            Bantayan Island is a tranquil tropical paradise located at the northernmost tip of Cebu. 
-            Unlike other bustling tourist destinations, Bantayan maintains a laid-back, serene atmosphere 
-            perfect for relaxation. It is world-renowned for its powdery white sand beaches, crystal-clear turquoise waters, 
-            and stunning sunsets. Beyond its coastline, visitors can explore cliff-diving spots, historic churches, 
-            and vibrant local night markets offering fresh seafood.
+            Bantayan Island is a stunning tropical island located at the northernmost tip of Cebu. 
+            It is famous for its crystal-clear waters, powdery white sand beaches, serene atmosphere, and fresh seafood.
         </p>
     </section>
 
-    <!-- 4. Details table using <th> headers -->
     <section>
-        <h2>Key Information</h2>
+        <h2>Travel Information</h2>
         <table border="1">
             <thead>
                 <tr>
                     <th>Location</th>
                     <th>Best Time to Visit</th>
-                    <th>Estimated Budget</th>
-                    <th>Recommended Activities</th>
+                    <th>Top Activity</th>
+                    <th>Entry / Environmental Fee</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Northern Cebu, Philippines</td>
                     <td>Dry Season (November to May)</td>
-                    <td>₱3,000 - ₱7,000 per person</td>
-                    <td>Island hopping, Skydiving, Beach camping, Cave swimming</td>
+                    <td>Island Hopping & Beach Relaxation</td>
+                    <td>₱30.00</td>
                 </tr>
             </tbody>
         </table>
+    </section>
+
+    <!-- Suggest-a-Place Form -->
+    <hr>
+    <section>
+        <h2>Suggest a Place</h2>
+        <form action="#" method="post">
+            
+            <!-- 1. Place Name Input -->
+            <p>
+                <label for="place-name-bantayan">Place Name:</label><br>
+                <input type="text" id="place-name-bantayan" name="place_name" placeholder="e.g. Bantayan Island" required>
+            </p>
+
+            <!-- 2. Category Radio Buttons -->
+            <fieldset>
+                <legend>Category</legend>
+                
+                <input type="radio" id="cat-food-ban" name="category" value="food">
+                <label for="cat-food-ban">Food Spot</label><br>
+
+                <input type="radio" id="cat-study-ban" name="category" value="study">
+                <label for="cat-study-ban">Study Spot</label><br>
+
+                <input type="radio" id="cat-outdoors-ban" name="category" value="outdoors" checked>
+                <label for="cat-outdoors-ban">Outdoors / Nature</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 3. What's Good About It Checkboxes -->
+            <fieldset>
+                <legend>What's good about it?</legend>
+
+                <input type="checkbox" id="good-aff-ban" name="good_points" value="affordable">
+                <label for="good-aff-ban">Affordable</label><br>
+
+                <input type="checkbox" id="good-wifi-ban" name="good_points" value="good_wifi">
+                <label for="good-wifi-ban">Good Wi-Fi</label><br>
+
+                <input type="checkbox" id="good-quiet-ban" name="good_points" value="quiet">
+                <label for="good-quiet-ban">Quiet / Peaceful</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 4. Contact Email Input -->
+            <p>
+                <label for="email-ban">Your Contact Email:</label><br>
+                <input type="email" id="email-ban" name="suggester_email" placeholder="example@email.com" required>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Suggestion</button>
+            </p>
+
+        </form>
     </section>
 
 </body>
