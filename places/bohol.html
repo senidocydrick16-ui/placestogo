@@ -1,3 +1,4 @@
+Heto ang pinal na code para sa places/bohol.html na ginamit ang eksaktong HTML structure na ibinigay mo, na nilagyan ng Suggest-a-Place Form sa ibaba ayon sa Module 4 requirements:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +52,64 @@
                 </tr>
             </tbody>
         </table>
+    </section>
+
+    <!-- Suggest-a-Place Form (Module 4 Requirement) -->
+    <hr>
+    <section>
+        <h2>Suggest a Place</h2>
+        <form action="#" method="post">
+            
+            <!-- 1. Place Name Input -->
+            <p>
+                <label for="place-name-bohol">Place Name:</label><br>
+                <input type="text" id="place-name-bohol" name="place_name" placeholder="e.g. Chocolate Hills" required>
+            </p>
+
+            <!-- 2. Category Radio Buttons (inside fieldset with legend) -->
+            <fieldset>
+                <legend>Category</legend>
+                
+                <input type="radio" id="cat-food-boh" name="category" value="food">
+                <label for="cat-food-boh">Food Spot</label><br>
+
+                <input type="radio" id="cat-study-boh" name="category" value="study">
+                <label for="cat-study-boh">Study Spot</label><br>
+
+                <input type="radio" id="cat-outdoors-boh" name="category" value="outdoors" checked>
+                <label for="cat-outdoors-boh">Outdoors / Nature</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 3. What's Good About It Checkboxes -->
+            <fieldset>
+                <legend>What's good about it?</legend>
+
+                <input type="checkbox" id="good-aff-boh" name="good_points" value="affordable">
+                <label for="good-aff-boh">Affordable</label><br>
+
+                <input type="checkbox" id="good-wifi-boh" name="good_points" value="good_wifi">
+                <label for="good-wifi-boh">Good Wi-Fi</label><br>
+
+                <input type="checkbox" id="good-quiet-boh" name="good_points" value="quiet">
+                <label for="good-quiet-boh">Quiet / Peaceful</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 4. Contact Email Input -->
+            <p>
+                <label for="email-boh">Your Contact Email:</label><br>
+                <input type="email" id="email-boh" name="suggester_email" placeholder="example@email.com" required>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Suggestion</button>
+            </p>
+
+        </form>
     </section>
 
 </body>
