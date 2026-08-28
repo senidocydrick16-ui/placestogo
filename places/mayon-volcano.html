@@ -53,6 +53,63 @@
         </table>
     </section>
 
+    <!-- Suggest-a-Place Form (Module 4 Requirement) -->
+    <hr>
+    <section>
+        <h2>Suggest a Place</h2>
+        <form action="#" method="post">
+            
+            <!-- 1. Place Name Input -->
+            <p>
+                <label for="place-name-mayon">Place Name:</label><br>
+                <input type="text" id="place-name-mayon" name="place_name" placeholder="e.g. Mayon Volcano" required>
+            </p>
+
+            <!-- 2. Category Radio Buttons (inside fieldset with legend) -->
+            <fieldset>
+                <legend>Category</legend>
+                
+                <input type="radio" id="cat-food-mayon" name="category" value="food">
+                <label for="cat-food-mayon">Food Spot</label><br>
+
+                <input type="radio" id="cat-study-mayon" name="category" value="study">
+                <label for="cat-study-mayon">Study Spot</label><br>
+
+                <input type="radio" id="cat-outdoors-mayon" name="category" value="outdoors" checked>
+                <label for="cat-outdoors-mayon">Outdoors / Nature</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 3. What's Good About It Checkboxes -->
+            <fieldset>
+                <legend>What's good about it?</legend>
+
+                <input type="checkbox" id="good-aff-mayon" name="good_points" value="affordable">
+                <label for="good-aff-mayon">Affordable</label><br>
+
+                <input type="checkbox" id="good-wifi-mayon" name="good_points" value="good_wifi">
+                <label for="good-wifi-mayon">Good Wi-Fi</label><br>
+
+                <input type="checkbox" id="good-quiet-mayon" name="good_points" value="quiet">
+                <label for="good-quiet-mayon">Quiet / Peaceful</label>
+            </fieldset>
+
+            <br>
+
+            <!-- 4. Contact Email Input -->
+            <p>
+                <label for="email-mayon">Your Contact Email:</label><br>
+                <input type="email" id="email-mayon" name="suggester_email" placeholder="example@email.com" required>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Suggestion</button>
+            </p>
+
+        </form>
+    </section>
+
 </body>
 </html>
-
