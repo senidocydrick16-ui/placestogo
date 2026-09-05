@@ -1,5 +1,5 @@
 :root {
-    --brand-color: #0066cc;
+    --brand: #0066cc;
     --dark-ink: #222222;
     --muted-grey: #666666;
     --light-bg: #f8f9fa;
@@ -21,7 +21,7 @@ body {
 header {
     background-color: #ffffff;
     padding: 15px;
-    border-bottom: 2px solid var(--brand-color);
+    border-bottom: 2px solid var(--brand);
 }
 
 main {
@@ -57,7 +57,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: var(--brand-color);
+    color: var(--brand);
     font-weight: bold;
 }
 
@@ -65,21 +65,25 @@ nav a:hover {
     color: var(--dark-ink);
 }
 
+.place-card,
 .product-card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
-    border-left: 5px solid var(--brand-color);
+    border-left: 5px solid var(--brand);
     margin-bottom: 20px;
 }
 
+.place-card h2,
+.place-card h3,
 .product-card h2,
 .product-card h3 {
     font-size: 1.4rem;
-    color: var(--brand-color);
+    color: var(--brand);
     margin-top: 0;
 }
 
+.place-card img,
 .product-card img {
     max-width: 250px;
     height: auto;
@@ -96,7 +100,7 @@ fieldset {
 }
 
 legend {
-    color: var(--brand-color);
+    color: var(--brand);
     font-weight: bold;
     font-size: 1.1rem;
     padding: 0 8px;
@@ -115,13 +119,13 @@ textarea {
 
 input:focus,
 textarea:focus {
-    outline: 3px solid var(--brand-color);
+    outline: 3px solid var(--brand);
     outline-offset: 2px;
 }
 
 button[type="submit"],
 input[type="submit"] {
-    background-color: var(--brand-color);
+    background-color: var(--brand);
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -133,14 +137,6 @@ input[type="submit"] {
 button[type="submit"]:hover,
 input[type="submit"]:hover {
     opacity: 0.9;
-}
-
-.location-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    border-left: 5px solid var(--brand-color);
-    margin-bottom: 20px;
 }
 
 .map-wrapper {
