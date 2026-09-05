@@ -1,28 +1,180 @@
-h3{
-    color: red;
-    font-size: 26px;
-    text-align: center;
-}
-h2{
-    color: black;
-
-}
-.D{
-    font-size: 17px;
-}
-.B{
-    font-size: 18px;
-    color: blue;
-}
-body{
-    background-color: lightgray;
+/* ==========================================
+   1. VARIABLES (:root)
+   ========================================== */
+:root {
+    --brand-color: #0066cc;      /* Brand / primary colour */
+    --dark-ink: #222222;         /* Dark text colour */
+    --muted-grey: #666666;       /* Muted grey colour */
+    --light-bg: #f8f9fa;         /* Light background colour */
 }
 
-img{
-    width: 30%;
-    border-radius: 15px;
-    
+/* ==========================================
+   2. BASE STYLES
+   ========================================== */
+* {
+    box-sizing: border-box;
 }
-body{
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-ink);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 20px;
+}
+
+/* ==========================================
+   3. LAYOUT REGIONS
+   ========================================== */
+header {
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 2px solid var(--brand-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+footer {
     text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--muted-grey);
+    border-top: 1px solid #dddddd;
+}
+
+/* ==========================================
+   4. STYLE THE NAV (Horizontal Nav Bar)
+   ========================================== */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--brand-color);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--dark-ink);
+}
+
+/* ==========================================
+   5. COMPONENTS - PRODUCT CARDS
+   ========================================== */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;                               /* At least 16px */
+    border-left: 5px solid var(--brand-color);    /* Coloured left border */
+    margin-bottom: 20px;                         /* Spacing between cards */
+}
+
+.product-card h2,
+.product-card h3 {
+    font-size: 1.4rem;
+    color: var(--brand-color);
+    margin-top: 0;
+}
+
+.product-card img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   6. CONTACT FORM STYLES
+   ========================================== */
+fieldset {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+legend {
+    color: var(--brand-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Visible focus state for keyboard accessibility */
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--brand-color);
+    outline-offset: 2px;
+}
+
+/* Styled Submit Button */
+button[type="submit"],
+input[type="submit"] {
+    background-color: var(--brand-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================
+   7. LOCATION / PLACE TO GO STYLES
+   ========================================== */
+.location-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 5px solid var(--brand-color);
+    margin-bottom: 20px;
+}
+
+.map-wrapper {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
 }
