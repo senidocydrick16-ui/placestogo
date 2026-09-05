@@ -1,16 +1,10 @@
-/* ==========================================
-   1. VARIABLES (:root)
-   ========================================== */
 :root {
-    --brand-color: #0066cc;      /* Brand / primary colour */
-    --dark-ink: #222222;         /* Dark text colour */
-    --muted-grey: #666666;       /* Muted grey colour */
-    --light-bg: #f8f9fa;         /* Light background colour */
+    --brand-color: #0066cc;
+    --dark-ink: #222222;
+    --muted-grey: #666666;
+    --light-bg: #f8f9fa;
 }
 
-/* ==========================================
-   2. BASE STYLES
-   ========================================== */
 * {
     box-sizing: border-box;
 }
@@ -24,9 +18,6 @@ body {
     padding: 20px;
 }
 
-/* ==========================================
-   3. LAYOUT REGIONS
-   ========================================== */
 header {
     background-color: #ffffff;
     padding: 15px;
@@ -47,9 +38,6 @@ footer {
     border-top: 1px solid #dddddd;
 }
 
-/* ==========================================
-   4. STYLE THE NAV (Horizontal Nav Bar)
-   ========================================== */
 nav {
     background-color: #ffffff;
     padding: 10px;
@@ -77,15 +65,12 @@ nav a:hover {
     color: var(--dark-ink);
 }
 
-/* ==========================================
-   5. COMPONENTS - PRODUCT CARDS
-   ========================================== */
 .product-card {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 20px;                               /* At least 16px */
-    border-left: 5px solid var(--brand-color);    /* Coloured left border */
-    margin-bottom: 20px;                         /* Spacing between cards */
+    padding: 20px;
+    border-left: 5px solid var(--brand-color);
+    margin-bottom: 20px;
 }
 
 .product-card h2,
@@ -103,9 +88,6 @@ nav a:hover {
     margin-top: 10px;
 }
 
-/* ==========================================
-   6. CONTACT FORM STYLES
-   ========================================== */
 fieldset {
     padding: 20px;
     border-radius: 8px;
@@ -131,14 +113,12 @@ textarea {
     border-radius: 4px;
 }
 
-/* Visible focus state for keyboard accessibility */
 input:focus,
 textarea:focus {
     outline: 3px solid var(--brand-color);
     outline-offset: 2px;
 }
 
-/* Styled Submit Button */
 button[type="submit"],
 input[type="submit"] {
     background-color: var(--brand-color);
@@ -155,9 +135,6 @@ input[type="submit"]:hover {
     opacity: 0.9;
 }
 
-/* ==========================================
-   7. LOCATION / PLACE TO GO STYLES
-   ========================================== */
 .location-container {
     background-color: #ffffff;
     border-radius: 8px;
