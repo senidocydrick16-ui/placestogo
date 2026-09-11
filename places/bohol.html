@@ -1,117 +1,48 @@
-Heto ang pinal na code para sa places/bohol.html na ginamit ang eksaktong HTML structure na ibinigay mo, na nilagyan ng Suggest-a-Place Form sa ibaba ayon sa Module 4 requirements:
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bohol - Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Hills, Bohol - Details</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../act.html">Activity</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <h1 class="site-title">My Travel Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- 1. Place name as <h1> -->
-    <h1>Bohol Province</h1>
+    <main class="container">
+        <article class="place-detail-card">
+            <h1 class="section-title">Chocolate Hills, Bohol</h1>
 
-    <!-- 2. Larger photo with proper alt text -->
-    <img src="https://islandhoppinginthephilippines.com/visayas/wp-content/uploads/2019/09/bohol.jpg" alt="Scenic view of the Chocolate Hills in Bohol" width="100%">
+            <div class="place-hero-image">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1000" alt="Chocolate Hills Bohol" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+            </div>
 
-    <!-- 3. Full description -->
-    <section>
-        <h2>Why You Should Visit</h2>
-        <p>
-            Bohol is a top eco-tourism destination in the Visayas, famous for the iconic Chocolate Hills, 
-            a geological formation of over 1,000 cone-shaped hills. It is also home to the Philippine Tarsier, 
-            one of the world's smallest primates, and offers scenic river cruises along the tranquil Loboc River.
-        </p>
-    </section>
+            <section class="detail-section">
+                <h2>Why You Should Visit</h2>
+                <p>
+                    The Chocolate Hills are a famous geological formation in Bohol, Philippines. 
+                    There are at least 1,260 hills spread over an area of more than 50 square kilometers. 
+                    During the dry season, the grass covering the hills turns chocolate brown, which gives them their iconic name.
+                </p>
+            </section>
 
-    <!-- 4. Details table using <th> headers -->
-    <section>
-        <h2>Key Information</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Location</th>
-                    <th>Best Time to Visit</th>
-                    <th>Estimated Budget</th>
-                    <th>Recommended Activities</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Central Visayas, Philippines</td>
-                    <td>Dry Season (December to May)</td>
-                    <td>₱4,000 - ₱8,000 per person</td>
-                    <td>Chocolate Hills Tour, Tarsier Sanctuary, Loboc River Cruise, Panglao Beaching</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+            <a href="../index.html" class="btn-details">Back to Home</a>
+        </article>
+    </main>
 
-    <!-- Suggest-a-Place Form (Module 4 Requirement) -->
-    <hr>
-    <section>
-        <h2>Suggest a Place</h2>
-        <form action="#" method="post">
-            
-            <!-- 1. Place Name Input -->
-            <p>
-                <label for="place-name-bohol">Place Name:</label><br>
-                <input type="text" id="place-name-bohol" name="place_name" placeholder="e.g. Chocolate Hills" required>
-            </p>
-
-            <!-- 2. Category Radio Buttons (inside fieldset with legend) -->
-            <fieldset>
-                <legend>Category</legend>
-                
-                <input type="radio" id="cat-food-boh" name="category" value="food">
-                <label for="cat-food-boh">Food Spot</label><br>
-
-                <input type="radio" id="cat-study-boh" name="category" value="study">
-                <label for="cat-study-boh">Study Spot</label><br>
-
-                <input type="radio" id="cat-outdoors-boh" name="category" value="outdoors" checked>
-                <label for="cat-outdoors-boh">Outdoors / Nature</label>
-            </fieldset>
-
-            <br>
-
-            <!-- 3. What's Good About It Checkboxes -->
-            <fieldset>
-                <legend>What's good about it?</legend>
-
-                <input type="checkbox" id="good-aff-boh" name="good_points" value="affordable">
-                <label for="good-aff-boh">Affordable</label><br>
-
-                <input type="checkbox" id="good-wifi-boh" name="good_points" value="good_wifi">
-                <label for="good-wifi-boh">Good Wi-Fi</label><br>
-
-                <input type="checkbox" id="good-quiet-boh" name="good_points" value="quiet">
-                <label for="good-quiet-boh">Quiet / Peaceful</label>
-            </fieldset>
-
-            <br>
-
-            <!-- 4. Contact Email Input -->
-            <p>
-                <label for="email-boh">Your Contact Email:</label><br>
-                <input type="email" id="email-boh" name="suggester_email" placeholder="example@email.com" required>
-            </p>
-
-            <!-- Submit Button -->
-            <p>
-                <button type="submit">Submit Suggestion</button>
-            </p>
-
-        </form>
-    </section>
+    <footer>
+        <p>&copy; 2026 My Travel Guide. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
-
