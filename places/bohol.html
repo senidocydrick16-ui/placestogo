@@ -36,8 +36,68 @@
                 </p>
             </section>
 
-            <a href="../index.html" class="btn-details">Back to Home</a>
+            <section class="detail-section">
+                <h2>Key Information</h2>
+                <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Best Time to Visit</th>
+                            <th>Estimated Budget</th>
+                            <th>Recommended Activities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bohol, Central Visayas, Philippines</td>
+                            <td>Dry Season (December to May)</td>
+                            <td>₱3,000 - ₱7,000 per person</td>
+                            <td>Viewing Deck Sightseeing, ATV Rides, Loboc River Cruise, Tarsier Sanctuary Tour</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </article>
+
+        <section class="suggestion-section">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Suggest a Place</legend>
+
+                    <p>
+                        <label for="place-name-bohol"><strong>Place Name:</strong></label><br>
+                        <input type="text" id="place-name-bohol" name="place_name" placeholder="e.g. Chocolate Hills" required>
+                    </p>
+
+                    <fieldset>
+                        <legend>Category</legend>
+                        <label><input type="radio" id="cat-food-bohol" name="category" value="food"> Food Spot</label><br>
+                        <label><input type="radio" id="cat-study-bohol" name="category" value="study"> Study Spot</label><br>
+                        <label><input type="radio" id="cat-outdoors-bohol" name="category" value="outdoors" checked> Outdoors / Nature</label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>What's good about it?</legend>
+                        <label><input type="checkbox" id="good-aff-bohol" name="good_points" value="affordable"> Affordable</label><br>
+                        <label><input type="checkbox" id="good-wifi-bohol" name="good_points" value="good_wifi"> Good Wi-Fi</label><br>
+                        <label><input type="checkbox" id="good-quiet-bohol" name="good_points" value="quiet"> Quiet / Peaceful</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="email-bohol"><strong>Your Contact Email:</strong></label><br>
+                        <input type="email" id="email-bohol" name="suggester_email" placeholder="example@email.com" required>
+                    </p>
+
+                    <p>
+                        <button type="submit" class="btn-details">Submit Suggestion</button>
+                    </p>
+                </fieldset>
+            </form>
+            <br>
+            <a href="../index.html" class="btn-details">Back to Home</a>
+        </section>
     </main>
 
     <footer>
