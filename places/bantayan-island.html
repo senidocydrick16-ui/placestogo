@@ -36,8 +36,68 @@
                 </p>
             </section>
 
-            <a href="../index.html" class="btn-details">Back to Home</a>
+            <section class="detail-section">
+                <h2>Key Information</h2>
+                <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Best Time to Visit</th>
+                            <th>Estimated Budget</th>
+                            <th>Recommended Activities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Northern Cebu, Philippines</td>
+                            <td>Dry Season (November to May)</td>
+                            <td>₱3,500 - ₱8,000 per person</td>
+                            <td>Island Hopping, Cliff Jumping at Ogtong Cave, Beach Swimming, Cycling</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </article>
+
+        <section class="suggestion-section">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Suggest a Place</legend>
+
+                    <p>
+                        <label for="place-name-bantayan"><strong>Place Name:</strong></label><br>
+                        <input type="text" id="place-name-bantayan" name="place_name" placeholder="e.g. Bantayan Island" required>
+                    </p>
+
+                    <fieldset>
+                        <legend>Category</legend>
+                        <label><input type="radio" id="cat-food-bantayan" name="category" value="food"> Food Spot</label><br>
+                        <label><input type="radio" id="cat-study-bantayan" name="category" value="study"> Study Spot</label><br>
+                        <label><input type="radio" id="cat-outdoors-bantayan" name="category" value="outdoors" checked> Outdoors / Nature</label>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend>What's good about it?</legend>
+                        <label><input type="checkbox" id="good-aff-bantayan" name="good_points" value="affordable"> Affordable</label><br>
+                        <label><input type="checkbox" id="good-wifi-bantayan" name="good_points" value="good_wifi"> Good Wi-Fi</label><br>
+                        <label><input type="checkbox" id="good-quiet-bantayan" name="good_points" value="quiet"> Quiet / Peaceful</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="email-bantayan"><strong>Your Contact Email:</strong></label><br>
+                        <input type="email" id="email-bantayan" name="suggester_email" placeholder="example@email.com" required>
+                    </p>
+
+                    <p>
+                        <button type="submit" class="btn-details">Submit Suggestion</button>
+                    </p>
+                </fieldset>
+            </form>
+            <br>
+            <a href="../index.html" class="btn-details">Back to Home</a>
+        </section>
     </main>
 
     <footer>
