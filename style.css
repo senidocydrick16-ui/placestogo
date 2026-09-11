@@ -3,13 +3,16 @@
     --brand-hover: #004d99;
     --dark-ink: #1a202c;
     --muted-grey: #4a5568;
-    --page-bg: #f0f4f8;
-    --card-bg: #ffffff;
-    --banner-bg: linear-gradient(135deg, #0066cc, #004d99);
+    
+    /* Dynamic Backgrounds & Glass Effects */
+    --page-bg: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --banner-bg: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
     --accent-bg: #e6f0fa;
-    --border-color: #cbd5e0;
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --border-color: rgba(203, 213, 224, 0.6);
+    
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -20,9 +23,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--dark-ink);
-    background-color: var(--page-bg);
+    background: var(--page-bg);
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 .container {
@@ -31,13 +36,14 @@ body {
     padding: 20px;
 }
 
-/* Header & Nav (Flexbox) */
+/* Flexbox Header */
 .site-header, header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: var(--card-bg);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
     border-bottom: 3px solid var(--brand);
     box-shadow: var(--shadow-sm);
 }
@@ -65,7 +71,7 @@ nav a {
     color: var(--brand);
     font-weight: bold;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -74,7 +80,7 @@ nav a:hover {
     color: var(--brand-hover);
 }
 
-/* Centered Banner (Flexbox Center) */
+/* Centered Banner (Module 6) */
 .centered-banner {
     display: flex;
     justify-content: center;
@@ -82,7 +88,7 @@ nav a:hover {
     height: 160px;
     background: var(--banner-bg);
     color: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
     margin: 20px 0 30px 0;
     box-shadow: var(--shadow-md);
     text-align: center;
@@ -94,41 +100,45 @@ nav a:hover {
     font-size: 1.8rem;
 }
 
-/* Cards & Grid Layout */
-.card-grid {
+/* Flex Responsive Place Cards (Activity 6.4) */
+.place-grid {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 24px;
 }
 
-.place-card,
-.product-card,
-.place-detail-card,
-.suggestion-section {
-    background-color: var(--card-bg);
-    border-radius: 12px;
+.place-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
     padding: 24px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
-    margin-bottom: 25px;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 240px;
     box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .place-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
+/* Buttons */
 .btn-details {
     display: inline-block;
     background-color: var(--brand);
     color: #ffffff;
     padding: 10px 18px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     font-size: 0.95rem;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -138,6 +148,18 @@ nav a:hover {
 .btn-details:hover {
     background-color: var(--brand-hover);
     transform: translateY(-2px);
+}
+
+/* Detail & Form Cards */
+.place-detail-card,
+.suggestion-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 25px;
 }
 
 .section-title {
