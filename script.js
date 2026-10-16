@@ -22,7 +22,7 @@ if (asideEl) {
     decisionBox.className = "place-detail-card";
     decisionBox.style.marginTop = "15px";
     decisionBox.innerHTML = `
-        <h3 style="color: var(--brand); margin-bottom: 8px;">Quick Decider</h3>
+        <h3 style="color: var(--brand); margin-bottom: 8px;">Quick Decider 📍</h3>
         <p><strong>Rating:</strong> ${rating} &rarr; ${ratingLabel}</p>
         <p><strong>Status:</strong> ${budgetResult}</p>
         <p><strong>Distance:</strong> ${distanceResult}</p>
